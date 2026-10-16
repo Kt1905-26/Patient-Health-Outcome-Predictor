@@ -1,0 +1,561 @@
+.dashboard-container {
+    padding: 30px;
+    max-width: 1400px;
+    margin: auto;
+    background: #f5f7fb;
+    min-height: 100vh;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #172033;
+}
+
+.dashboard-header p {
+    margin-top: 8px;
+    color: #667085;
+    font-size: 16px;
+}
+
+.error-message {
+    background: #fff1f2;
+    color: #b42318;
+    border: 1px solid #fecdca;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.global-success-message {
+    background: #ecfdf3;
+    color: #067647;
+    border: 1px solid #abefc6;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.dashboard-section {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+.section-number {
+    min-width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #2563eb;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.cleaning-number {
+    background: #f59e0b;
+}
+
+.analysis-number {
+    background: #16a34a;
+}
+
+.section-content {
+    flex: 1;
+}
+
+.section-content h2 {
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 24px;
+}
+
+.section-description {
+    color: #667085;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.upload-area {
+    padding: 20px;
+    border: 2px dashed #d0d5dd;
+    border-radius: 12px;
+    background: #fafbfc;
+}
+
+.upload-area input[type="file"] {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.selected-file {
+    color: #344054;
+    margin-bottom: 15px;
+}
+
+.primary-button,
+.clean-button,
+.analysis-button {
+    border: none;
+    padding: 13px 22px;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.primary-button {
+    background: #2563eb;
+    color: white;
+}
+
+.clean-button {
+    background: #f59e0b;
+    color: white;
+}
+
+.analysis-button {
+    background: #16a34a;
+    color: white;
+}
+
+.primary-button:hover,
+.clean-button:hover,
+.analysis-button:hover {
+    transform: translateY(-1px);
+    opacity: 0.92;
+}
+
+.primary-button:disabled,
+.clean-button:disabled,
+.analysis-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.disabled-info {
+    color: #98a2b3;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.success-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    border-radius: 12px;
+}
+
+.success-box h3 {
+    color: #067647;
+    margin-top: 0;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.result-grid div {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.result-grid span,
+.result-grid strong {
+    display: block;
+}
+
+.result-grid span {
+    color: #667085;
+    font-size: 14px;
+}
+
+.result-grid strong {
+    margin-top: 5px;
+    font-size: 24px;
+    color: #172033;
+}
+
+.cleaning-results {
+    margin-top: 25px;
+}
+
+.cleaning-success {
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    color: #067647;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.cleaning-results h3 {
+    color: #172033;
+    margin-top: 22px;
+}
+
+.cleaning-comparison {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr 1fr;
+    align-items: center;
+    gap: 15px;
+}
+
+.comparison-card {
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.comparison-card span,
+.comparison-card strong {
+    display: block;
+}
+
+.comparison-card span {
+    font-size: 14px;
+    color: #667085;
+}
+
+.comparison-card strong {
+    font-size: 32px;
+    margin-top: 8px;
+}
+
+.comparison-card.raw {
+    background: #eff6ff;
+}
+
+.comparison-card.cleaned {
+    background: #ecfdf3;
+}
+
+.comparison-card.removed {
+    background: #fff7ed;
+}
+
+.arrow {
+    font-size: 30px;
+    color: #667085;
+}
+
+.cleaning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.detail-card {
+    background: #f8fafc;
+    border: 1px solid #eaecf0;
+    border-radius: 10px;
+    padding: 18px;
+}
+
+.detail-card span {
+    display: block;
+    color: #667085;
+    font-size: 14px;
+}
+
+.detail-card strong {
+    display: block;
+    color: #172033;
+    font-size: 25px;
+    margin-top: 7px;
+}
+
+.analysis-results {
+    margin-top: 25px;
+}
+
+.analysis-success {
+    background: #ecfdf3;
+    border: 1px solid #abefc6;
+    color: #067647;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* ==============================================================
+   POWER BI-INSPIRED 11-CARD RESPONSIVE KPI GRID (4 - 4 - 3)
+============================================================== */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+/* Desktop 4-4-3 arrangement */
+.kpi-col-4 {
+    grid-column: span 3; /* 4 cards per row: 4 * 3 = 12 */
+}
+
+.kpi-col-3 {
+    grid-column: span 4; /* 3 cards per row: 3 * 4 = 12 */
+}
+
+/* Card Container with guaranteed equal height & subtle shadow */
+.kpi-card-unified {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 128px;
+    box-sizing: border-box;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+    border-top: 3px solid #0284c7;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card-unified:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+/* Category Color Indicators */
+.kpi-card-unified.accent-blue { border-top-color: #2563eb; }
+.kpi-card-unified.accent-emerald { border-top-color: #10b981; }
+.kpi-card-unified.accent-amber { border-top-color: #f59e0b; }
+.kpi-card-unified.accent-red { border-top-color: #ef4444; }
+.kpi-card-unified.accent-purple { border-top-color: #8b5cf6; }
+.kpi-card-unified.accent-slate { border-top-color: #0284c7; }
+
+/* Small uppercase header */
+.kpi-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.kpi-card-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #64748b;
+    line-height: 1.2;
+}
+
+/* Main Metric Display */
+.kpi-card-metric {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 4px 0 6px;
+}
+
+.kpi-metric-main {
+    font-size: 26px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.kpi-metric-main.red {
+    color: #ef4444;
+}
+
+.kpi-metric-unit {
+    font-size: 14px;
+    font-weight: 500;
+    color: #64748b;
+}
+
+.kpi-badge-supplement {
+    font-size: 13px;
+    font-weight: 600;
+    background: #f1f5f9;
+    color: #475467;
+    padding: 2px 7px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.kpi-badge-supplement.red {
+    background: #fef2f2;
+    color: #ef4444;
+}
+
+.kpi-badge-supplement.purple {
+    background: #f5f3ff;
+    color: #7c3aed;
+}
+
+/* Supporting Subtitle */
+.kpi-card-subtitle {
+    font-size: 12px;
+    color: #94a3b8;
+    line-height: 1.35;
+    margin-top: auto;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.stat-card {
+    background: #f8fafc;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    padding: 22px;
+}
+
+.stat-card span {
+    display: block;
+    color: #667085;
+    font-size: 14px;
+}
+
+.stat-card strong {
+    display: block;
+    color: #172033;
+    font-size: 30px;
+    margin-top: 8px;
+}
+
+.charts-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.chart-card {
+    background: white;
+    border: 1px solid #eaecf0;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.chart-card h3 {
+    margin-top: 0;
+    color: #172033;
+}
+
+.gender-section {
+    margin-top: 25px;
+}
+
+.gender-section h3 {
+    color: #172033;
+}
+
+.gender-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.gender-card {
+    background: #f8fafc;
+    border: 1px solid #eaecf0;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.gender-card span {
+    display: block;
+    color: #667085;
+}
+
+.gender-card strong {
+    display: block;
+    font-size: 28px;
+    margin-top: 8px;
+}
+
+@media (max-width: 1024px) {
+
+    .cleaning-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .arrow {
+        text-align: center;
+    }
+
+    .cleaning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* KPI Grid on Medium / Tablet Screens: 2 cards per row (span 6 of 12) */
+    .kpi-col-4,
+    .kpi-col-3 {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .dashboard-container {
+        padding: 15px;
+    }
+
+    .dashboard-section {
+        flex-direction: column;
+    }
+
+    .result-grid,
+    .cleaning-grid,
+    .stats-grid,
+    .gender-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    /* KPI Grid on Mobile Screens: 1 card per row (span 12 of 12) */
+    .kpi-col-4,
+    .kpi-col-3 {
+        grid-column: span 12;
+    }
+}

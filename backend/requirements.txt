@@ -1,0 +1,11 @@
+flask
+flask-cors
+pandas
+numpy
+scikit-learn
+joblib
+python-multipart
+streamlit
+plotly
+openpyxl
+fpdf2
